@@ -11,7 +11,7 @@ const fetchVideoInfo = require('youtube-info');
 const fs = require('fs');
 const ms = require("ms");
 const dateFormat = require('dateformat');
-const config = require("./config.json")
+
 
 client.on("ready", () => {
  console.log(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`);
