@@ -1,6 +1,3 @@
-
-
-
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const moment = require('moment');
@@ -15,12 +12,16 @@ const fs = require('fs');
 const ms = require("ms");
 const dateFormat = require('dateformat');
 const config = require("./config.json")
-var prefix = "#";
-client.on('ready',  () => {
-    console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
-    console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
-    console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
-  });
+
+client.on("ready", () => {
+ console.log(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`);
+ console.log(`   |> Name: ${client.user.username}`);
+ console.log(`   |> Servers: ${client.guilds.size}`);
+ console.log(`   |> Members: ${client.users.size}`);
+ console.log(`   |> Channels: ${client.channels.size}`);
+ //console.log(`_______________________________________________________________________\n\n`);
+
+});
 
 var user = {};
 var warn = {};
@@ -107,15 +108,7 @@ hours = currentTime.getHours() + 3 ,
 
 
 
-client.on("ready", () => {
- console.log(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`);
- console.log(`   |> Name: ${client.user.username}`);
- console.log(`   |> Servers: ${client.guilds.size}`);
- console.log(`   |> Members: ${client.users.size}`);
- console.log(`   |> Channels: ${client.channels.size}`);
- //console.log(`_______________________________________________________________________\n\n`);
 
-});
 
 
 
