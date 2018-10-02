@@ -210,11 +210,11 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id == 457575291821490176) return;
+  if (message.author.id == 449705743000666124) return;
 
 
 if (message.content.startsWith(prefix + 'playing')) {
-if (message.author.id !== '410421617869455370') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+if (message.author.id !== '331081268731052042') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
 client.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
 } 
