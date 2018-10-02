@@ -206,6 +206,7 @@ channel.guild.owner.send(`<@!${channelremover.id}>
   });
 client.on('message', message => {
 
+var prefix = "!";
 
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
