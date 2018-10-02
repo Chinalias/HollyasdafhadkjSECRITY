@@ -1,5 +1,5 @@
 
-var prefix = "#";
+
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -15,7 +15,12 @@ const fs = require('fs');
 const ms = require("ms");
 const dateFormat = require('dateformat');
 const config = require("./config.json")
-
+var prefix = "#";
+client.on('ready',  () => {
+    console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
+    console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
+  });
 
 var user = {};
 var warn = {};
